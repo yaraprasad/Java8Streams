@@ -25,6 +25,8 @@ public class CreateStreamsFor8 {
         
         //4 Stream generate
         Stream<Double> limit = Stream.generate(Math::random).limit(5);
+        System.out.println(limit);
+
 
     }
 

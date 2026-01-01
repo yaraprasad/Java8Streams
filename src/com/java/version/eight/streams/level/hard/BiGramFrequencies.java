@@ -26,7 +26,8 @@ public class BiGramFrequencies {
                         Function.identity(), Collectors.counting()
                 ));
         System.out.println(result);
-        //{is cool=1, and java=1, is great=1, powerful java=1, is fun=1, great and=1, fun java=1, is powerful=1, java is=4}
+        //{is cool=1, and java=1, is great=1, powerful java=1, is fun=1, great and=1,
+        // fun java=1, is powerful=1, java is=4}
     }
 }
   

@@ -2,6 +2,7 @@ package com.java.version.eight.streams.level.easy;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CountElementStartsWithA {
     public static void main(String[] args) {
@@ -12,5 +13,6 @@ public class CountElementStartsWithA {
                 .filter(str -> str.startsWith("A"))
                 .count();
         System.out.println(fruitsWithA);
+
     }
 }
