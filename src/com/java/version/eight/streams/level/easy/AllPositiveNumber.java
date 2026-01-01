@@ -23,7 +23,7 @@ public class AllPositiveNumber {
         List<Integer> postiveList1 = numbers1.stream().filter(n -> n > 0)
                 .toList();
 
-        System.out.println(postiveList1); //empty list
+        System.out.println(postiveList1); //[3, 9, 12, 15, 18] list
 
         //better approach
         boolean isAllPositive1 = numbers1.stream()
