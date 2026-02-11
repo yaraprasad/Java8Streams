@@ -19,7 +19,7 @@ public class FindDistinctElements {
         Set<Integer> set1 = new HashSet<>(numbers);
         System.out.println(set1); //arbitrary vales
 
-        List<Integer> list = numbers.stream().distinct().toList();
+        List<Integer> list = numbers.stream().distinct().collect(Collectors.toList());;
         System.out.println(list); //preserved insertion order
 
     }

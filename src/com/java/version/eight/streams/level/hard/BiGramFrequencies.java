@@ -18,7 +18,7 @@ public class BiGramFrequencies {
         //[java, is, great, and, java, is, fun, java, is, powerful, java, is, cool];
         List<String> out = IntStream.range(0, words.length - 1)
                 .mapToObj(i -> words[i] + " " + words[i + 1])
-                .toList();
+                .collect(Collectors.toList());
         System.out.println(out);
         //[java is, is great, great and, and java, java is, is fun, fun java, java is, is powerful, powerful java, java is, is cool]
         Map<String, Long> result = out.stream()

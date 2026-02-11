@@ -2,6 +2,7 @@ package com.java.version.eight.streams.level.easy;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class FlattenListofList {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class FlattenListofList {
 
                 List<Integer> flatList = listOfList.stream()
                         .flatMap(List::stream)
-                        .toList();
+                        .collect(Collectors.toList());
                 System.out.println(flatList); //[1, 2, 3, 4, 5, 6, 7, 8, 9]
 
     }

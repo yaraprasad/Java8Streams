@@ -29,7 +29,7 @@ public class HighestAvgSalaryDepartment {
         //{Finance=64500.0, HR=62500.0, IT=71666.66666666667, Operations=44000.0}
 
         Map.Entry<String, Double> highAvgSalDept = deptAvgSalary.entrySet().stream().max(Map.Entry.comparingByValue())
-                .orElseThrow();
+                        .get();
 
         System.out.println(highAvgSalDept); //IT=71666.66666666667
 
@@ -37,8 +37,8 @@ public class HighestAvgSalaryDepartment {
         Map.Entry<String, Double> maxAvgDeptSal = employeees.stream()
                 .collect(Collectors.groupingBy(Employeee::getDepartment,
                         Collectors.averagingDouble(Employeee::getSalary)))
-                .entrySet().stream().max(Map.Entry.comparingByValue())
-                .orElseThrow();
+                .entrySet().stream().max(Map.Entry.comparingByValue()).get();
+               // .orElseThrow();
         System.out.println(maxAvgDeptSal); //IT=71666.66666666667
     }
 }

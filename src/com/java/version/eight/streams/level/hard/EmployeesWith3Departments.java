@@ -32,7 +32,7 @@ public class EmployeesWith3Departments {
         List<String> result = collect.entrySet().stream()
                 .filter(e -> e.getValue().size() >= 3)
                 .map(Map.Entry::getKey)
-                .toList();
+                .collect(Collectors.toList());
         System.out.println(result); //[David, John]
 
     }

@@ -27,14 +27,14 @@ public class DepartmentEmployeeCount {
         System.out.println(map); //{Finance=2, HR=2, IT=3, Operations=1}
 
         List<String> list = map.entrySet().stream().filter(e -> e.getValue() > 2).map(Map.Entry::getKey)
-                .toList();
+                .collect(Collectors.toList());
         System.out.println(list); //[IT]
 
         //combine both in one
         List<String> list2 = employeees.stream()
                 .collect(Collectors.groupingBy(Employeee::getDepartment,
                         Collectors.counting())).entrySet().stream().filter(e -> e.getValue() > 2).map(Map.Entry::getKey)
-                .toList();
+                .collect(Collectors.toList());;
         System.out.println( list2); //[IT]
 
 
